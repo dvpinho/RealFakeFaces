@@ -1,0 +1,39 @@
+h1 {
+    font-weight: bolder;
+    font-size: 46px;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: right;
+}
+
+h3 {
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: left;
+}
+
+h4 {
+    font-size: 12px;
+    text-align: left;
+}
+
+h5 {
+    font-size: 12px;
+    text-align: right;
+}
+
+* {
+    border-radius: 0.25rem;
+}
+
+.stProgress > div > div > div {
+    height: 0.1rem;
+}
+
+#MainMenu, footer {
+    visibility: hidden;
+}
