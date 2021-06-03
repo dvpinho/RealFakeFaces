@@ -4,13 +4,13 @@ from random import randint
 import streamlit as st
 from PIL import Image
 
-from css_import import css_loader
 from model import get_model, get_model_summary, model_prediction
 
 st.set_page_config(page_title="Real Fake Face Classification",
                    page_icon=path.join('assets', 'icons', 'logo.png'))
 
-css_loader(path.join('assets', 'styles.css'))
+with open(path.join('assets', 'styles.css')) as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 _, page_banner_img, _ = st.beta_columns([3, 2, 3])
 page_banner_img.image(path.join('assets', 'icons', 'robot_face.png'),
@@ -21,13 +21,13 @@ st.subheader('')
 
 st.markdown(
     """
-    This is a real-fake face classifier built with convolutional neural networks. The classifier was trained on a 
-    data set comprised of 1400 images (700 of each class) and tested on 600 images (300 per class). The classifier 
-    achieved an accuracy of **83.2%**. You can find more performance metrics and information about this project in 
-    the [![GitHub](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/dvpinho/RealFakeFaces) 
-    repository. To use this web application just drag and drop a face image to be classified by the model. While 
-    you think about that, have a 🍪 and refresh the page once or twice to classify a few built-in faces embedded 
-    into the app. The classifier will return the result with the associated probability that a specific face image 
+    This is a real-fake face classifier built with convolutional neural networks. The classifier was trained on a
+    data set comprised of 1400 images (700 of each class) and tested on 600 images (300 per class). The classifier
+    achieved an accuracy of **83.2%**. You can find more performance metrics and information about this project in
+    the [![GitHub](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/dvpinho/RealFakeFaces)
+    repository. To use this web application just drag and drop a face image to be classified by the model. While
+    you think about that, have a 🍪 and refresh the page once or twice to classify a few built-in faces embedded
+    into the app. The classifier will return the result with the associated probability that a specific face image
     belongs to either the ```Real``` or ```Fake``` class. The model's architecture summary is also presented below.
     """
 )
