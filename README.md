@@ -7,9 +7,6 @@ For the project work and with the provided dataset, a real-fake face classifier 
 
 To extend the course work, and in order to leverage the created models, a web application was developed using the [streamlit](https://streamlit.io/) framework. For more information about the models or the project, check out the [```project```](https://github.com/dvpinho/RealFakeFaces/tree/main/project) folder in the root directory of this repository. The application source code is in the [```app```](https://github.com/dvpinho/RealFakeFaces/tree/main/app) folder.
 
-## View the web app live
-Click [here](https://realfakefaceclassification.herokuapp.com/) to go to the app page.
-
 
 ## Run the app locally
 
